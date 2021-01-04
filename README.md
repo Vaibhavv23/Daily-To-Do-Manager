@@ -11,7 +11,7 @@ Task menu where user can add their tasks and bind them into specific goals.
 Technology used:-  
 HTML, CSS, JavaScript(Front-end), Node.js(Back-end) & MongoDB(Database)
 
-## Output Screens:-
+### Output Screens:-
 
 ![image](https://user-images.githubusercontent.com/35419746/103549008-b1e80580-4ecc-11eb-9bf6-fdbe8408da64.png)
 ![image](https://user-images.githubusercontent.com/35419746/103549038-bf9d8b00-4ecc-11eb-919f-0f09fa2f41bb.png)

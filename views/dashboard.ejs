@@ -1,0 +1,92 @@
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-bars"></i></i></a>
+        </li>
+
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-right:10px">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-bell"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-plus-circle"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-cog"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-home"></i></a>
+                </li>
+
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</section>
+
+<!----------------SideBarSection---------------------->
+<!-- 
+<section>
+    <div id="sidebar">
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-view-dashboard"></i> List
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-link"></i> Goal
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-widgets"></i> Calender
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-calendar"></i> Report
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-info-outline"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="zmdi zmdi-settings"></i> About
+                </a>
+            </li>
+        </ul>
+    </div>
+</section> -->
+<div id="mySidenav" class="sidenav">
+    <a href="#">List</a>
+    <a href="/goals/add">Goal</a>
+    <a href="#">Calendar</a>
+    <a href="#">Report</a>
+    <a href="#">Settings</a>
+    <a href="#">About</a>
+    
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  <!-- <span onclick="openNav()">open</span> -->
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main"><p>hello <%= name %>, This is your Dashboard!</p>
+    <a href='/users/logout'>Logout</a>
+
+</div>

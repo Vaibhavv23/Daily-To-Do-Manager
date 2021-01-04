@@ -1,0 +1,133 @@
+* {
+	margin: 0px;
+	padding: 0px;
+  }
+  
+  html,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;  
+  }
+  body{
+	font-family: sans-serif;
+	height: 100vh;
+	display: flex;
+	background:whitesmoke;
+	background-position: center;
+	align-items: center;
+	justify-content: center;
+  }
+  .task-box{
+	width: 320px;
+	height: 330px;
+	border: 2px solid gray;
+	background: #fff;
+	padding: 70px 30px;
+	position: relative;
+	color: rgba(14, 15, 15, 0.938)f;
+  }
+  
+  .logo{
+	width: 100px;
+	height: 140px;
+	border-radius: 50%;
+	position: absolute;
+	top: -35px;
+	left: calc(50% - 50px);
+  }
+  
+  h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align:center ;
+	font-size: 22px;
+  }
+  .task-box p{
+	margin: 0;
+	padding: 0 ;
+	font-weight: bold;
+	
+  }
+  
+  .task-box input{
+	margin-bottom: 15px;
+	position: static;
+  
+	
+  }
+  
+  .task-box input[type="text"],input[type="date"]{
+	border: none;
+	border-bottom: 1px solid #a517ba;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: rgb(37, 26, 26);
+	font-size: 16px;
+	
+  }
+
+  .task-box input[type="radio"]{
+	
+	align-items: center;
+	color: rgb(37, 26, 26);
+	position: initial;
+  height: 20px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 40%;
+  display: inline-flexbox;
+  margin: 7px;
+	
+  }
+  .task-box button{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #a517ba;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	width: 100px;
+	margin: 7px;
+	
+  }
+  .task-box button:hover{
+  cursor: pointer;
+  background:#5f1782;
+   color: #fff;  
+  
+  }
+  .task-box a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #a517ba;
+	
+  
+  }
+
+  .task-box label{
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1;
+	vertical-align:text-top;
+	display:inline-block;
+	padding:20px;
+	margin: 0px;
+
+	
+	
+  
+  }
+  
+  .task-box a:hover
+  {
+	color: rgba(211, 12, 12, 0.952);
+  }
+  
+  .footer{
+	margin: 15px;
+  
+  }
+	
+  

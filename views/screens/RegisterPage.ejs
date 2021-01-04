@@ -1,0 +1,43 @@
+<div class="signup-box">
+  <a href="/"> <img src="/images/Logo_Todo.png" alt="" class=logo> </a>
+  <h1>Sign Up</h1>
+
+  <%- include('../components/messages.ejs') %>
+
+  <form action="/users/register" method="POST">
+      <p> Name</p>
+      <input type="text" 
+      placeholder="Enter your name" 
+      name="name" 
+      value="<%= typeof name != 'undefined' ? name : '' %>">
+      
+      <p>Email</p>
+      <input type="email" 
+      placeholder="Enter your email address" 
+      name="email"
+      value="<%= typeof email != 'undefined' ? email : '' %>"
+      >
+
+      <p>Password</p>
+      <input type="password" 
+      placeholder="Enter password" 
+      name="password"
+      value="<%= typeof password != 'undefined' ? password : '' %>"
+      >
+
+      <p>Confirm Password</p>
+      <input type="password" 
+      placeholder="Re-Enter password" 
+      name="cpassword"
+      value="<%= typeof cpassword != 'undefined' ? cpassword : '' %>"
+      >
+      
+      <button type="submit">Sign up</button>
+  
+      <div class="footer">
+          Already signed up?<a href="/users/login">Go to Login</a>
+      </div>
+
+  </form>
+
+</div>

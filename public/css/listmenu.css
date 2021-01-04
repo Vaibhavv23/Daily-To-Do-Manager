@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: sans-serif;
+  }
+  #nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    padding: 0 !important;
+  }
+  .navbar-brand img {
+    height: 40px;
+    padding-left: 20px;
+  }
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+  .navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+  }
+  .fa-bars {
+    color: #fff;
+    font-size: 30px !important;
+  }
+  .navbar-toggler {
+    outline: none !important;
+  }
+  
+  /*----------------BannerSection------------------*/
+  
+  #banner {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    padding-top: 5%;
+  }
+  .btn-primary {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: rgb(17, 2, 2);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .promo-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+  }
+  .fa-play-circle {
+    width: 20px;
+    margin: 10px;
+  }
+  #banner a {
+    color: #fff;
+  }
+  
+  .background {
+    width: 100vw;
+    height: 350px;
+    overflow: hidden;
+  }
+  .background img {
+    width: 400px;
+    height: 300px;
+    margin: -75px 0 0 -100px;
+  }
+  .bg-image {
+    /* image specified in separate class below */
+    height: 450px;
+    width: 100%;
+  }
+  
+  .bg-image-wedding {
+    background-image: url("https://www.htmlmate.com/wp-content/themes/htmlmate/assets/images/banner_bg.svg");
+  
+    /* lt ie8 */
+    -ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+  
+    /* scale bg image proportionately */
+    background-size: cover;
+  
+    /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+    -ms-behavior: url(/backgroundsize.min.htc);
+    /* prevent scaling past src width (or not) */
+    /* max-width: 1200px; */
+  }
+  
+  /* example media queries */
+  @media only screen and (min-width: 768px) {
+    .bg-image {
+      height: 550px;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .bg-image {
+      height: 600px;
+    }
+  }
+  
+  /*--------------------------FeatureSection------------------------*/
+  
+  #features {
+    padding: 80px 0;
+  }
+  .feature-img {
+    width: 100px;
+    margin-top: 20px;
+  }
+  .features {
+    padding: 20px;
+  }
+  .features h4 {
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+  .title::before {
+    content: "";
+    background: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+  }
+  .title::after {
+    content: "";
+    background: #7b1798;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+  }
+  
+  /*---------------------aboutUS Section----------------------*/
+  
+  .team {
+    margin: 75px 0;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    padding-bottom: 10px;
+  }
+  h1::after {
+    content: "";
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+  }
+  .profile {
+    margin-top: 25px;
+  }
+  .profile .img-box {
+    opacity: 1;
+    display: block;
+    position: relative;
+  }
+  .profile h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .profile h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .img-box::after {
+    content: "";
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .img-box ul {
+    margin: 0;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  .img-box ul li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 3px;
+    padding: 7px;
+    display: inline-block;
+  }
+  .img-box a {
+    color: #fff;
+  }
+  .img-box:hover:after {
+    opacity: 1;
+  }
+  .img-box:hover ul {
+    opacity: 1;
+  }
+  .img-box a:hover li {
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+  .img-box:after,
+  .img-box ul,
+  .img-box ul li {
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  /*-----------------------SociaLMedia-------------------*/
+  
+  .social-media {
+    background: #f8f9fa;
+    padding: 100px 0;
+  }
+  .social-media p {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .social-icons img {
+    width: 60px;
+    transition: 0.5s;
+  }
+  .social-icons a:hover img {
+    transform: translateY(-10px);
+  }
+  
+  /*---------------------------FooterSection-------------------------*/
+  
+  #footer {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    color: #fff;
+  }
+  .footer-img {
+    width: 100%;
+  }
+  .footer-box {
+    padding: 20px;
+  }
+  .footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  .footer-box .fa {
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+  }
+  .footer-box .form-control {
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+    margin-top: 25px;
+    max-width: 250px;
+  }
+  .footer-box .btn-primary {
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+  }
+  
+  /*-------------------------SideBar Section-------------------------*/
+  
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+  
+  body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Toggle Styles */
+  
+  #viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+  }
+  
+  /* Sidebar Styles */
+  
+  #sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+  }
+  
+  #sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+  }
+  
+  #sidebar header a:hover {
+    color: #fff;
+  }
+  
+  
+  #sidebar .nav a{
+    background: none;
+    border-bottom: 1px solid #455A64;
+    color: #ECEFF1;
+    font-size: 14px;
+    padding: 16px 24px;
+  }
+  
+  #sidebar .nav a:hover{
+    background: none;
+    color: #ECEFF1;
+  }
+  
+  #sidebar .nav a i{
+    margin-right: 16px;
+  }
+  /* The side navigation menu */
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 250px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 69px; /* Stay at the top */
+    left: 0;
+    background-color: #37474F; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+    margin-left:250px
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

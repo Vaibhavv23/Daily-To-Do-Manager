@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+}
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    padding: 0 !important;
+}
+.navbar-brand img {
+    height: 70px;
+    padding-left: 20px;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+.fa-bars {
+    color: #fff;
+    font-size: 30px !important;
+}
+.navbar-toggler {
+    outline: none !important;
+}
+
+/----------------BannerSection------------------*/
+
+#banner {
+    background-image: linear-gradient(to right, #8d818f, #5f1782);
+    padding-top: 5%;
+}
+
+.promo-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.fa-play-circle {
+    width: 20px;
+    margin: 10px;
+}
+#banner a {
+    color: #fff;
+}
+
+.background {
+    width: 100vw;
+    height: 350px;
+    overflow: hidden;
+}
+.background img {
+    width: 400px;
+    height: 300px;
+    margin: -75px 0 0 -100px;
+}
+.bg-image {
+    /* image specified in separate class below */
+    height: 450px;
+    width: 100%;
+}
+
+.bg-image-wedding {
+    background-image: url("https://www.htmlmate.com/wp-content/themes/htmlmate/assets/images/banner_bg.svg");
+
+    /* lt ie8 */
+    -ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+
+    /* scale bg image proportionately */
+    background-size: cover;
+
+    /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+    -ms-behavior: url(/backgroundsize.min.htc);
+    /* prevent scaling past src width (or not) */
+    /* max-width: 1200px; */
+}
+
+/* example media queries */
+@media only screen and (min-width: 768px) {
+    .bg-image {
+        height: 550px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .bg-image {
+        height: 600px;
+    }
+}

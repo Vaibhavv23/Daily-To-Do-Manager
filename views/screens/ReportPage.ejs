@@ -1,0 +1,54 @@
+<!-- Nav Bar Section -->
+<%- include('../components/nav-bar-dashboard.ejs') %>
+
+<!----------------SideBarSection---------------------->
+<%- include('../components/side-bar-dashboard.ejs') %>
+
+<div id="main">
+<div class="container">
+    <div class="jumbotron ">
+        <div class="card">
+            
+            <div class="card-header p-3 mb-2 bg-info text-white">Goal Progress Report</div>
+            <div class="card-body">
+                <% if(goals.length<1) { %>
+                    <h6  class="nogoals" >
+                        Right now you do not have any goal. Kindly go to goal menu to create goals</h6>
+                <% }else { %>
+                <table class="table table-dark table-hover table-bordered table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Goal Name</th>
+                            <th scope="col">Goal Progress</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <% goals.forEach(function(goal){ %>
+                    
+                        <tr>
+                            <td><%= goal.goalName %></td>
+                            <td> <% if(helper.returnProgress(goal.startDate,goal.endDate,goal.totalDays)==0) { %>
+                                 <h6 class="noprogress">Goal is not started yet.Please come back on start date</h6>
+                                 <% } else { %>
+                                <h6 class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                                aria-valuenow="<%= helper.returnProgress(goal.startDate,goal.endDate,goal.totalDays) %>"
+                                    aria-valuemin="0" aria-valuemax="100" 
+                                    style="width: <%= helper.returnProgress(goal.startDate,goal.endDate, goal.totalDays) %>%">
+                                    <%= helper.returncompletedDays(goal.startDate,goal.endDate,goal.totalDays) %> 
+                                    out of <%= goal.totalDays %> Days Completed
+                                </div>
+                                <% } %>
+                            </h6></td>
+                        </tr>
+                        
+                    
+                    <% }) %>
+                </tbody>
+                </table>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

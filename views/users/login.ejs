@@ -1,0 +1,27 @@
+<div class="login-box">
+    <a href="/"><img src="/images/Logo_Todo.png" alt="logo" class=logo></a>
+    <h1>Log in</h1>
+    <%- include('../components/messages.ejs') %>
+    <form action="/users/login" method="POST">
+
+        <p>Email</p>
+        <input type="email" 
+        placeholder="Enter your email " 
+        name="email"
+        value="<%= typeof email != 'undefined' ? email : '' %>">
+
+        <p>Password</p>
+        <input type="password" 
+        placeholder="Enter your password" 
+        name="password"
+        value="<%= typeof password != 'undefined' ? password : '' %>"
+        >
+
+        <button type="submit">Log in</button>
+
+        <div class="footer">
+            Do not have a account?<a href="/users/register"> Sign Up now</a>
+        </div>
+    </form>
+
+</div>

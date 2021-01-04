@@ -1,0 +1,79 @@
+<!-- Nav Bar Section -->
+<%- include('../components/nav-bar-dashboard.ejs') %>
+
+<!----------------SideBarSection---------------------->
+<%- include('../components/side-bar-dashboard.ejs') %>
+  
+  <!-- Use any element to open the sidenav -->
+  <!-- <span onclick="openNav()">open</span> -->
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+    <h5>Welcome <%=name %></h5>
+    <div class="card">
+        
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Goals</h5>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <a href="goals/add">
+                        <button class=" float-right btn btn-md btn-outline-success">
+                            Add Goal
+                        </button>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            <div class="card-body">
+                <% if(goals.length<1) { %>
+                    <h6  class="nogoals" >
+                        You have not created any goals.Click on add goal button at right side to create new goals</h6>
+                <% }else { %>
+                <table class="table table-dark table-hover table-bordered">
+                    <thead >
+                        <tr>
+                            <th>Goal Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    
+                        <% goals.forEach(function(goal){ %>
+                        <tbody> 
+                            <td><a href="/goals/<%= goal._id %>" ><%= goal.goalName %></a></td>
+                                <td><%= helper.formatDate(goal.startDate,'MMMM Do YYYY') %></td>
+                                <td><%= helper.formatDate(goal.endDate,'MMMM Do YYYY') %></td>
+                                <td>
+                                    <a href="/goals/edit/<%= goal._id %>" >
+                                        <button class="btn btn-primary badge-pill" style="width:80px;"> 
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                    </a>
+                                </td>
+                                <td>
+                                   <form action="/goals/<%= goal._id %>" method="POST" id="delete-form">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="btn btn-danger badge-pill" style="width:80px;">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                                </td>
+                                
+                            </tbody>
+                            <% }) %>
+                        
+                    
+                </table>
+            
+            </div>
+            <% } %>
+        
+    </div>
+    
+</div>

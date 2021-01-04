@@ -1,0 +1,58 @@
+<div class="task-box">
+    <img src="/images/Logo_Todo.png" alt="" class=logo>
+    <h1>Add a Task</h1>
+
+    <form action="/tasks/add" method="POST">
+           
+        <input type="text" placeholder="Task Name" name="taskName">
+        
+       <div>
+        <p>Priority:</p>
+       High <input type="radio" id="high" name="priority" value="high">
+  
+       Low <input type="radio" id="low" name="priority" value="low">
+
+  </div>
+
+    
+<!--
+        <div class="row">
+            <div class="col-md-3">
+            High
+            <div>
+            <div class="col-md-3">
+            <input type="radio" name="priority" value="high">
+            </div>
+            <div class="col-md-3">
+            Low
+            <div>
+            <div class="col-md-3">
+            <input type="radio" name="priority" value="Low">
+            </div>
+            
+            </div>
+        -->              
+<br>
+            <div>
+                <p>Task Type:</p>
+                YES/NO <input type="radio" id="yes_or_no" name="taskType" value="yes_or_no">               
+               Numerical <input type="radio" id="numerical" name="taskType" value="numerical">
+   
+           </div>
+<br>
+           <div>
+            <p>Target:</p>
+             <input type="text" placeholder="Write here" name="target" >               
+           </div>
+
+
+        <!-- <p> Description:</p>
+        <textarea rows="3" cols="30" name="description">
+             </textarea> -->
+        <!---- Description:<input type="text" placeholder="Write here"> -->
+        <input type="hidden" id="goal" name="goal" value="<%= goal %>">           
+           
+        <button type="submit">Add Task</button>
+
+    </form>
+</div>

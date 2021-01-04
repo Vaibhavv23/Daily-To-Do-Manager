@@ -1,0 +1,37 @@
+<div class="goal-box">
+    <a href="/"><img src="/images/Logo_Todo.png" alt="Logo" class=logo></a>
+    <h1>Add a Goal</h1>
+    <%- include('../partials/messages.ejs') %>
+    <form action="/goals/add" method="POST">
+        <input 
+        type="text" 
+        name="goalName"
+        placeholder="Goal Name"
+        value="<%= typeof goalName != 'undefined' ? goalName : '' %>"
+        >
+
+        <p>Start Date:</p>
+        <input 
+        type="date"
+        name="startDate"
+        value="<%= typeof startDate != 'undefined' ? startDate : '' %>">
+
+        <p>End Date:</p>
+        <input 
+        type="date"
+        name="endDate"
+        value="<%= typeof endDate != 'undefined' ? endDate : '' %>">
+
+        <p> Description:</p>
+        <textarea rows="4" 
+        cols="40" 
+        name="description"
+        placeholder="Write description if any" 
+        value="<%= typeof description != 'undefined' ? description : '' %>"
+        ></textarea>
+    
+        <button type="submit">Add Goal</button>
+    
+    </form>
+</div>
+
